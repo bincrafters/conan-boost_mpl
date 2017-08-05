@@ -2,7 +2,7 @@
 
 [Conan.io](https://conan.io) package for [Boost.Mpl](https://github.com/Boostorg/Mpl) project
 
-The packages generated with this **conanfile** can be found in [Bintray](https://bintray.com/bincrafters/conan-public/Boost.Mpl%3Abincrafters).
+The packages generated with this **conanfile** can be found in [Bintray](https://bintray.com/bincrafters/public-conan/Boost.Mpl%3Abincrafters).
 
 ## For Users: Use this package
 
