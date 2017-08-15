@@ -3,15 +3,12 @@ from conans import ConanFile, tools, os
 class BoostMplConan(ConanFile):
     name = "Boost.Mpl"
     version = "1.64.0"
-    generators = "txt"
-    url = "https://github.com/boostorg/mpl"
+    url = "https://github.com/bincrafters/conan-boost-mpl"
+    source_url = "https://github.com/boostorg/mpl"
     description = "Please visit http://www.boost.org/doc/libs/1_64_0/libs/libraries.htm"
     license = "www.boost.org/users/license.html"
     requires =  "Boost.Level5Group/1.64.0@bincrafters/testing"
    
-    def package_id(self):
-        self.info.header_only()
-        
     #This library is part of one or more cyclic dependency groups within Boost.
     
     #All members of cyclic dependency groups must be built under single package per group for Conan.
