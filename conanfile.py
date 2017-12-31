@@ -7,7 +7,7 @@ from conans import ConanFile, tools
 class BoostMplConan(ConanFile):
     name = "boost_mpl"
     version = "1.66.0"
-    url = "https://github.com/bincrafters/conan-boost-mpl"
+    url = "https://github.com/bincrafters/conan-boost_mpl"
     
     lib_short_names = ["mpl"]
     is_in_cycle_group = True
