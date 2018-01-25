@@ -8,7 +8,8 @@ class BoostMplConan(ConanFile):
     name = "boost_mpl"
     version = "1.66.0"
     url = "https://github.com/bincrafters/conan-boost_mpl"
-    
+    author = "Bincrafters <bincrafters@gmail.com>"
+    exports = ["LICENSE.md"]
     lib_short_names = ["mpl"]
     is_in_cycle_group = True
     is_header_only = True
