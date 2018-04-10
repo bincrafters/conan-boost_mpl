@@ -6,28 +6,33 @@ from conans import ConanFile, tools
 
 class BoostMplConan(ConanFile):
     name = "boost_mpl"
-    version = "1.66.0"
-    url = "https://github.com/bincrafters/conan-boost_mpl"
+    version = "1.67.0"
     author = "Bincrafters <bincrafters@gmail.com>"
     exports = ["LICENSE.md"]
     lib_short_names = ["mpl"]
-    level_group = "boost_level5group"
     is_header_only = True
 
     def package_id_additional(self):
         self.info.header_only()
 
     requires = (
-        "boost_package_tools/1.66.0@bincrafters/testing",
-        "boost_level5group/1.66.0@bincrafters/testing"
+        "boost_config/1.67.0@bincrafters/testing",
+        "boost_core/1.67.0@bincrafters/testing",
+        "boost_package_tools/1.67.0@bincrafters/testing",
+        "boost_predef/1.67.0@bincrafters/testing",
+        "boost_preprocessor/1.67.0@bincrafters/testing",
+        "boost_static_assert/1.67.0@bincrafters/testing",
+        "boost_type_traits/1.67.0@bincrafters/testing",
+        "boost_utility/1.67.0@bincrafters/testing"
     )
 
     # BEGIN
 
-    description = "Please visit http://www.boost.org/doc/libs/1_66_0"
+    url = "https://github.com/bincrafters/conan-boost_mpl"
+    description = "Please visit http://www.boost.org/doc/libs/1_67_0"
     license = "BSL-1.0"
     short_paths = True
-    build_requires = "boost_generator/1.66.0@bincrafters/testing"
+    build_requires = "boost_generator/1.67.0@bincrafters/testing"
 
     def package_id(self):
         getattr(self, "package_id_additional", lambda:None)()
@@ -55,7 +60,5 @@ class BoostMplConan(ConanFile):
             import boost_package_tools  # pylint: disable=F0401
             boost_package_tools.package_info(self)
         getattr(self, "package_info_additional", lambda:None)()
-
-
 
     # END
