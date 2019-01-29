@@ -8,6 +8,7 @@ base = python_requires("boost_base/1.69.0@bincrafters/testing")
 
 class BoostMplConan(base.BoostBaseConan):
     name = "boost_mpl"
+    version = "1.69.0"
     url = "https://github.com/bincrafters/conan-boost_mpl"
     lib_short_names = ["mpl"]
     header_only_libs = ["mpl"]
